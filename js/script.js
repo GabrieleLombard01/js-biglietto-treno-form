@@ -17,11 +17,17 @@ let discount = null;
 
 //Info utente
 const kms = parseInt(prompt('Quanti chilomentri devi percorrere?', 100).trim());
-const age = parseInt(prompt('Quanti anni hai?', 18).trim());
+const age = parseInt(prompt('Quanti anni hai?', 18).trim()); 
 
 //Prezzo calcolator
-const price = priceKm * kms;
-console.log(kms,age,price);
+const basePrice = priceKm * kms;
+let finalPrice = basePrice
+
+if(age >= 65){
+    discount = 40;
+} else if (age <= 18){
+    discount = 20;
+}
 
 //Inserisco Price nell'elemento
-totalElement.innerText = message + price.toFixed(2);
+totalElement.innerText = message + finalPrice.toFixed(2);
