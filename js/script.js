@@ -40,3 +40,11 @@ totalElement.innerText = message + finalPrice.toFixed(2);
  4- Applico la logica dell'esercizio precedente 
  5- Stampo il risultato dei calcoli nella parte sottostante al form
 */
+
+//Prendiamo gli input dal DOM tramite gli ID
+const name = document.querySelector("#user-name");
+const surname = document.querySelector("#surname");
+const km = document.querySelector("#km");
+const age = document.querySelector("#ag");
+
+console.log(name, surname, km, age)
