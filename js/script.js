@@ -1,6 +1,6 @@
 //JS RESET
 console.log('JS OK')
-
+/*
 //---Calcolatore:
 
 //Elemento DOM
@@ -31,3 +31,12 @@ if(age >= 65){
 
 //Inserisco Price nell'elemento
 totalElement.innerText = message + finalPrice.toFixed(2);
+*/
+
+/*
+ 1- Prendiamo gli input dal DOM tramite gli ID
+ 2- Tramite ELEMENT.VALUE andiamo a prendere i valori inseriti dall'utente
+ 3- Tramite (button.addEventListener ecc..) salvo i valori inseriti dall'utente
+ 4- Applico la logica dell'esercizio precedente 
+ 5- Stampo il risultato dei calcoli nella parte sottostante al form
+*/
