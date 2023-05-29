@@ -42,9 +42,28 @@ totalElement.innerText = message + finalPrice.toFixed(2);
 */
 
 //Prendiamo gli input dal DOM tramite gli ID
-const name = document.querySelector("#user-name");
+const input = document.querySelector("input");
+/*
+const userName = document.querySelector("#user-name");
 const surname = document.querySelector("#surname");
 const km = document.querySelector("#km");
 const age = document.querySelector("#ag");
+*/
+const btn = document.querySelector("button");
+const ticket = document.querySelector("#ticket");
 
-console.log(name, surname, km, age)
+
+//Tramite ELEMENT.VALUE andiamo a prendere i valori inseriti dall'utente
+
+
+//Tramite (button.addEventListener ecc..) salvo i valori inseriti dall'utente
+btn.addEventListener ('click', function () {
+   const userName = input.value;
+   const surname = input.value;
+   const km = input.value;
+   const age = input.value;
+
+}) ;
+
+
+console.log(btn);
