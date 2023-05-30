@@ -32,10 +32,37 @@
                 <h5 class="card-title">Inserisci i tuoi dati</h5>
                 <hr>
                 <div class="row row-cols-1 row-cols-md-3">
-                    <div class="col"></div>
-                    <div class="col"></div>
-                    <div class="col"></div>
+                    <div class="col">
+                        <div class="mb-3">
+                            <!--Nome utente-->
+                            <label for="name" class="form-label">Nome completo</label>
+                            <input type="text" class="form-control" id="name" placeholder="Nome Cognome">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="mb-3">
+                            <!--KM-->
+                            <label for="kms" class="form-label">Distanza in kms</label>
+                            <input type="number" min="5" step="1" class="form-control" id="kms" value="10">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="mb-3">
+                            <!--ETA'-->
+                            <label for="age" class="form-label">Fascia d'età</label>
+                            <select class="form-select" id="age">
+                                <option value="">Adulto</option>
+                                <option value="min">Minore</option>
+                                <option value="over">Over 65</option>
+                              </select>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="card-footer d-flex justify-content-end">
+                <!--Bottoni-->
+                <button type="button" class="btn btn-primary me-2" id="confirm-button">Genera</button>
+                <button type="button" class="btn btn-secondary" id="reset-button">Reset</button>
             </div>
         </div>
     </section>
