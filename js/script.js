@@ -92,6 +92,13 @@ confirmButton.addEventListener('click', function(){
         // PNR random
         const pnr = Math.floor(Math.random() * (100000 - 90000 )) + 90000;
 
+        // Dati nel ticket
+        passengerElement.innerText = nameValue;
+        rateElement.innerText = rateName;
+        cabElement.innerText = cab;
+        pnrElement.innerText = pnr;
+        priceElement.innerText = '€' + price.toFixed(2);
+        
 
 
 
