@@ -80,7 +80,20 @@ confirmButton.addEventListener('click', function(){
         //Discount
         if(ageValue === 'min'){
             price *= 0.8;
+            rateName = 'Tariffa minori';
         }
-        else if(ageValue === 'over'){}
+        else if(ageValue === 'over'){
+            price *= 0.6;
+            rateName = 'Tariffa over 65';
+        }
+        // Carrozza random
+        const cab = Math.floor(Math.random() * 12) + 1;
+
+        // PNR random
+        const pnr = Math.floor(Math.random() * (100000 - 90000 )) + 90000;
+
+
+
+
     }
 });
