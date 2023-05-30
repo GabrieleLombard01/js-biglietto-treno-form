@@ -74,5 +74,13 @@ confirmButton.addEventListener('click', function(){
         alert('Ops... Qualcosa è andato storto!');
     } else {
         //prezzo e tariffa base
+        let price = kmsValue * 0.21;
+        let rateName = 'Tariffa Ordinaria'
+
+        //Discount
+        if(ageValue === 'min'){
+            price *= 0.8;
+        }
+        else if(ageValue === 'over'){}
     }
 });
