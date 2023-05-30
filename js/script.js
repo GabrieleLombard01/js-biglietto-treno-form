@@ -44,4 +44,12 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 //|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 //|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+// 1 Raccolgo tutti i riferimenti al DOM
 
+// FORM ELEMENTS
+const = nameField = document.getElementById('name');
+const = kmsField = document.getElementById('kms');
+const = ageField = document.getElementById('age');
+const = confirmButton = document.getElementById('confirm-button');
+const = resetButton = document.getElementById('reset-button');
+const = buyButton = document.getElementById('buy-button');
