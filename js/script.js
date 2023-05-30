@@ -53,3 +53,11 @@ const = ageField = document.getElementById('age');
 const = confirmButton = document.getElementById('confirm-button');
 const = resetButton = document.getElementById('reset-button');
 const = buyButton = document.getElementById('buy-button');
+
+// TICKET ELEMENTS
+const ticketSection = document.getElementById('ticket-section');
+const passengerElement = document.getElementById('passenger');
+const rateElement = document.getElementById('rate');
+const cabElement = document.getElementById('cab');
+const pnrElement = document.getElementById('pnr');
+const priceElement = document.getElementById('price');
