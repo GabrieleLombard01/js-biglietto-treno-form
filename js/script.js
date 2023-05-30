@@ -61,3 +61,18 @@ const rateElement = document.getElementById('rate');
 const cabElement = document.getElementById('cab');
 const pnrElement = document.getElementById('pnr');
 const priceElement = document.getElementById('price');
+
+// Ascolto il click del confirm-button
+confirmButton.addEventListener('click', function(){
+    // Recupero i valori dal form
+    const nameValue = nameField.value.trim();
+    const kmsValue = parseInt(kmsField.value);
+    const ageValue = ageField.value;
+
+    //VALIDATION
+    if(!nameValue || isNaN(kmsValue) || kmsValue < 1 ){
+        alert('Ops... Qualcosa è andato storto!');
+    } else {
+        //prezzo e tariffa base
+    }
+});
