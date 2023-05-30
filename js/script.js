@@ -47,12 +47,12 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 // 1 Raccolgo tutti i riferimenti al DOM
 
 // FORM ELEMENTS
-const = nameField = document.getElementById('name');
-const = kmsField = document.getElementById('kms');
-const = ageField = document.getElementById('age');
-const = confirmButton = document.getElementById('confirm-button');
-const = resetButton = document.getElementById('reset-button');
-const = buyButton = document.getElementById('buy-button');
+const  nameField = document.getElementById('name');
+const  kmsField = document.getElementById('kms');
+const  ageField = document.getElementById('age');
+const  confirmButton = document.getElementById('confirm-button');
+const  resetButton = document.getElementById('reset-button');
+const  buyButton = document.getElementById('buy-button');
 
 // TICKET ELEMENTS
 const ticketSection = document.getElementById('ticket-section');
@@ -62,45 +62,52 @@ const cabElement = document.getElementById('cab');
 const pnrElement = document.getElementById('pnr');
 const priceElement = document.getElementById('price');
 
+//Costanti di calcolo
+const pricePerKms = 0.21;
+const minDiscount = 0.8;
+const overDiscount = 0.6;
+
 // Ascolto il click del confirm-button
-confirmButton.addEventListener('click', function(){
+confirmButton.addEventListener('click', function () {
     // Recupero i valori dal form
     const nameValue = nameField.value.trim();
     const kmsValue = parseInt(kmsField.value);
     const ageValue = ageField.value;
 
     //VALIDATION
-    if(!nameValue || isNaN(kmsValue) || kmsValue < 1 ){
+    if (!nameValue || isNaN(kmsValue) || kmsValue < 1 ) {
         alert('Ops... Qualcosa è andato storto!');
-    } else {
-        //prezzo e tariffa base
-        let price = kmsValue * 0.21;
-        let rateName = 'Tariffa Ordinaria'
+        return;
+    } 
 
-        //Discount
-        if(ageValue === 'min'){
-            price *= 0.8;
-            rateName = 'Tariffa minori';
-        }
-        else if(ageValue === 'over'){
-            price *= 0.6;
-            rateName = 'Tariffa over 65';
-        }
-        // Carrozza random
-        const cab = Math.floor(Math.random() * 12) + 1;
+    //prezzo e tariffa base    
+    let price = kmsValue * pricePerKms;    
+    let rateName = 'Tariffa Ordinaria'    
 
-        // PNR random
-        const pnr = Math.floor(Math.random() * (100000 - 90000 )) + 90000;
+    //Discount    
+    if (ageValue === 'min') {    
+        price *= minDiscount;    
+        rateName = 'Tariffa minori';    
+    }    
+    else if (ageValue === 'over') {    
+        price *= overDiscount;    
+        rateName = 'Tariffa over 65';    
+    }  
 
-        // Dati nel ticket
-        passengerElement.innerText = nameValue;
-        rateElement.innerText = rateName;
-        cabElement.innerText = cab;
-        pnrElement.innerText = pnr;
-        priceElement.innerText = '€' + price.toFixed(2);
+    // Carrozza random    
+    const cab = Math.floor(Math.random() * 12) + 1;    
+
+    // PNR random    
+    const pnr = Math.floor(Math.random() * (100000 - 90000 )) + 90000;    
+
+    // Dati nel ticket    
+    passengerElement.innerText = nameValue ;    
+    rateElement.innerText = rateName;    
+    cabElement.innerText = cab;    
+    pnrElement.innerText = pnr;    
+    priceElement.innerText = '€' + price.toFixed(2);   
+     
         
-
-
-
-    }
+    // Cambiare display al ticket    
+    ticketSection.classList.remove('d-none');    
 });
