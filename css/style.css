@@ -1,0 +1,17 @@
+/*GENERICS*/
+body{
+    background-color: #c41228;
+}
+main{
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    border-radius: 20px;
+}
+header{
+    height: 60px;
+    background-color: rgb(193, 193, 193);
+}
+/*utilities*/
+.logo_img{
+    height: calc(100% / 1.5);
+}
