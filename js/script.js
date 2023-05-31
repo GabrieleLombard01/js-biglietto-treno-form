@@ -56,7 +56,7 @@ const  buyButton = document.getElementById('buy-button');
 
 // TICKET ELEMENTS
 const ticketSection = document.getElementById('ticket-section');
-const passengerElement = document.getElementById('passenger');
+const passengerElement = document.getElementById('passenger-name');
 const rateElement = document.getElementById('rate');
 const cabElement = document.getElementById('cab');
 const pnrElement = document.getElementById('pnr');
@@ -85,13 +85,13 @@ confirmButton.addEventListener('click', function () {
     let rateName = 'Tariffa Ordinaria'    
 
     //Discount    
-    if (ageValue === 'min') {    
+    if (ageValue === `min`) {    
         price *= minDiscount;    
-        rateName = 'Tariffa minori';    
+        rateName = `Tariffa minori`;    
     }    
-    else if (ageValue === 'over') {    
+    else if (ageValue === `over`) {    
         price *= overDiscount;    
-        rateName = 'Tariffa over 65';    
+        rateName = `Tariffa over 65`;    
     }  
 
     // Carrozza random    
@@ -105,9 +105,9 @@ confirmButton.addEventListener('click', function () {
     rateElement.innerText = rateName;    
     cabElement.innerText = cab;    
     pnrElement.innerText = pnr;    
-    priceElement.innerText = '€' + price.toFixed(2);   
+    priceElement.innerText = `€` + price.toFixed(2);   
      
         
     // Cambiare display al ticket    
-    ticketSection.classList.remove('d-none');    
+    ticketSection.classList.remove(`d-none`);    
 });
